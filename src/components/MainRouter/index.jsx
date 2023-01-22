@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Home from './pages/Home';
-import FicheLogement from './pages/FicheLogement';
-import APropos from './pages/APropos';
-import Error from './pages/Error';
+import Home from '../../pages/Home';
+import FicheLogement from '../../pages/FicheLogement';
+import APropos from '../../pages/APropos';
+import Error from '../../pages/Error';
 
 function MainRouter() {
     return (

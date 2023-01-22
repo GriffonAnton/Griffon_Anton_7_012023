@@ -1,30 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
 import './index.css';
-import Home from './pages/Home';
-import FicheLogement from './pages/FicheLogement';
-import APropos from './pages/APropos';
-import Error from './pages/Error';
 import reportWebVitals from './reportWebVitals';
+import Banner from './components/Banner';
+import MainRouter from './components/MainRouter';
+import Footer from './components/Footer'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Router>
-      <Route exact path="/">
-        <Home/>
-      </Route>
-      <Route path="/fiche-logement/:logementId">
-        <FicheLogement/>
-      </Route>
-      <Route path="/a-propos">
-        <APropos/>
-      </Route>
-      <Route>
-        <Error/>
-      </Route>
-    </Router>
+    <Banner />
+    <MainRouter />
+    <Footer/>
   </React.StrictMode>
 );
 
