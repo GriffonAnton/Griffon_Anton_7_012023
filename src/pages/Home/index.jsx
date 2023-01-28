@@ -1,4 +1,5 @@
-import './index.css';
+import '../../style.css';
+import React, { Component }  from 'react';
 
 function Home() {
   return (

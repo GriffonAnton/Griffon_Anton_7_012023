@@ -1,6 +1,6 @@
-import React from 'react';
+import './style.css';
+import React, { Component }  from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Banner from './components/Banner';
 import MainRouter from './components/MainRouter';
