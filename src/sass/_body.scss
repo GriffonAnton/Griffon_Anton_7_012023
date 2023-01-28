@@ -1,5 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+html {
+    a:link {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
+    a:active {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
+    a:visited {
+        color: inherit;
+        text-decoration: inherit;
+    }
+
+    a:hover {
+        color: inherit;
+        text-decoration: inherit;
+    }
+}
+
 body {
     margin-left: 50px;
     margin-right: 50px;
