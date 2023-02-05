@@ -1,19 +1,21 @@
-import '../../style.css';
-import React, { Component } from 'react';
-import LogoKasa from "../../assets/logo_kasa.png"
 
-function Banner() {
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+function Banner({ urlImage, text }) {
+
     return (
-      <header>
-        <div>
-          <img src={LogoKasa} alt="logo de Kasa" />
+        <div className='banner'>
+            <h1 className='banner__text'>{text}</h1>
+            <img className='banner__image' src={urlImage} alt='image de bannière' />
         </div>
-        <nav>
-          <p>Accueil</p>
-          <p>À Propos</p>
-        </nav>
-      </header>
     );
+
+}
+
+Banner.propTypes = {
+    urlImage: PropTypes.string.isRequired,
+    text: PropTypes.string
 }
 
 export default Banner;

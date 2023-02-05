@@ -1,4 +1,4 @@
-import '../../style.css';
+
 import React, { Component } from 'react';
 import LogoNegatif from "../../assets/logo_negatif.png"
 

@@ -1,28 +1,29 @@
-import '../../style.css';
+
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-function Card(props) {
+function Card({id,title,cover}) {
   
-    const ficheURL = "/fiche-logement/" + props.id;
-    const title = props.title;
-    const cover = props.cover;
-    Card.propTypes = {
-        id: PropTypes.string.isRequired,
-        title: PropTypes.string.isRequired,
-        cover: PropTypes.string.isRequired
-    }
+    const ficheURL = "/fiche-logement/" + id;
+
     return (
-        <Link to={ficheURL}>
-            <article className='card'>
+        <article className='card'>
+            <Link to={ficheURL}>
                 <img src={cover} alt='couverture du logement' />
                 <h2>{title}</h2>
-            </article>    
-        </Link>
+            </Link>
+        </article>    
+      
     )
-    
 
 };
+
+Card.propTypes = {
+    id: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    cover: PropTypes.string.isRequired
+}
+
 
 export default Card;
