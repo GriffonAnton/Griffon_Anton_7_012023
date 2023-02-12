@@ -7,12 +7,16 @@ import { useParams } from 'react-router-dom';
 import Carrousel from '../../components/Carrousel';
 import Collapse from '../../components/Collapse';
 import Logements from '../../data/logements.json';
+import Error from '../Error';
 
 function FicheLogement() {
 
     const idLogement = useParams().logementId;
     const logementsList = Logements;
     const infoLogement = logementsList.find(logement => logement.id === idLogement);
+    if (infoLogement == undefined) {
+        return (<Error />);
+    }
     const ratingStars = () => {
         let stars = [];
         for (let i = 1; i <= 5; i++){
