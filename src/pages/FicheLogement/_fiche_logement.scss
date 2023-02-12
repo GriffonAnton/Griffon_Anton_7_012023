@@ -1,0 +1,68 @@
+@import "../../sass/variables";
+
+.fiche_logement {
+    &__header{
+        display: flex;
+        justify-content: space-between;
+        &__right{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    }
+    &__collapses{
+        display: flex;
+        justify-content: space-around;
+        margin-top: 10px;
+
+        & div{
+            width: 95%;
+        }
+    }
+}
+
+.tags {
+    display: flex;
+    &__tag{
+        display: flex;
+        background-color: $mainColor;
+        color: white;
+        font-size: 75%;
+        width: 90px;
+        padding: 3px;
+        border-radius: 3px;
+        justify-content: center;
+        margin-right: 5px;
+    }
+}
+
+.host {
+    margin:5px;
+    display: flex;
+    align-items: center;
+    & p {
+        margin: 5px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    & img{
+        overflow: hidden;
+        object-fit: cover;
+        width: 50px;
+        aspect-ratio: 1/1;
+        border-radius: 25px;
+    }
+}
+
+.rating {
+    &__star{
+        font-size: 150%;
+        margin: 5px;
+        &--color{
+            color: $mainColor;
+        }
+        &--grey{
+            color: lightgray;
+        }
+    }
+}
