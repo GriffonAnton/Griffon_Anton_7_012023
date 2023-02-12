@@ -8,16 +8,14 @@ import Banner from '../../components/Banner';
 function Home() {
 
   const logementsList = Logements;
-  
-  const cards = logementsList.map(logement =>
-    <Card id={logement.id} title={logement.title} cover={logement.cover} />
-  );
 
   return (
     <section className='home'>
       <Banner urlImage={Paysage} text='Chez vous, partout et ailleurs'/>
       <div className='home__list'>
-        {cards}
+        {logementsList.map(logement =>
+          <Card id={logement.id} title={logement.title} cover={logement.cover} />
+        )}
       </div>
     </section>
   )

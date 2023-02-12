@@ -1,19 +1,26 @@
 
 import React, { Component,useState } from 'react';
 import PropTypes from 'prop-types';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { solid } from '@fortawesome/fontawesome-svg-core/import.macro'
 
 function Collapse({title, text}) {
 
-    const [open, setOPen] = useState(false);
+    const [open, setOpen] = useState(false);
 
     const toggle = () => {
-        setOPen(!open);
+        setOpen(!open);
     };
 
     return (
         <article className='collapse'>
-            <h2 className='collapse__title' onClick={toggle}>{title}</h2>
-            {open && <p className='collapse__text'>{text}</p>}
+            <div className='collapse__head' onClick={toggle}>
+                <h2>{title}</h2>
+                {open ? <FontAwesomeIcon icon={solid('chevron-up')} /> : <FontAwesomeIcon icon={solid('chevron-down')} />}
+            </div>
+            {open && <div className='collapse__text'>
+                <p>{text}</p>
+            </div>}
         </article>
   );
 
