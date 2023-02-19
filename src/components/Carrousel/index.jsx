@@ -49,6 +49,7 @@ function Carrousel({ picturesList }) {
                 <FontAwesomeIcon icon={solid('chevron-left')}/>
             </div>
             <img className='carrousel__images' src={picturesList[indexPicture - 1]} alt={'image du logement ' + indexPicture} />
+            <div className='carrousel__counter'>{indexPicture}/{picturesList.length}</div>
             <div className='carrousel__arrow' onClick={next}>
                 <FontAwesomeIcon icon={solid('chevron-right')}/>
             </div>     
