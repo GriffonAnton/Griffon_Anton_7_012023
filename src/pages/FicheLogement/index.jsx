@@ -1,35 +1,23 @@
 
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
-import React, { Component }  from 'react';
+import React  from 'react';
 import { useParams } from 'react-router-dom';
 import Carrousel from '../../components/Carrousel';
 import Collapse from '../../components/Collapse';
 import Logements from '../../data/logements.json';
 import Error from '../Error';
+import Rating from '../../components/Rating';
 
 function FicheLogement() {
 
-    const idLogement = useParams().logementId;
+    const { logementId } = useParams();
     const logementsList = Logements;
-    const infoLogement = logementsList.find(logement => logement.id === idLogement);
-    if (infoLogement == undefined) {
+    const infoLogement = logementsList.find(logement => logement.id === logementId);
+    if (infoLogement === undefined) {
         return (<Error />);
     }
-    const ratingStars = () => {
-        let stars = [];
-        for (let i = 1; i <= 5; i++){
-            if (+infoLogement.rating >= i) {
-                stars.push(<FontAwesomeIcon className='rating__star rating__star--color' icon={solid('star')}/>);
-            } else {
-                stars.push(<FontAwesomeIcon className='rating__star rating__star--grey' icon={solid('star')}/>);
-            }
-        }
-        return stars;
-    }
-    console.log(ratingStars)
     
+    console.log('+infoLogement.rating');
+    console.log(+infoLogement.rating);
     return (
         <section className='fiche_logement'>
             <Carrousel picturesList={infoLogement.pictures} />
@@ -44,11 +32,9 @@ function FicheLogement() {
                 <div className='fiche_logement__header__right'>
                     <div className='host'>
                         <p>{infoLogement.host.name}</p>
-                        <img  src={infoLogement.host.picture} alt={'photo de profil de l\'hôte'}/>
+                        <img  src={infoLogement.host.picture} alt={'photo de ' + infoLogement.host.name}/>
                     </div>
-                    <div className='rating'>
-                        {ratingStars()}
-                    </div>
+                    <Rating stars={+infoLogement.rating}/>
                 </div>
             </div>
             <div className='fiche_logement__collapses'>

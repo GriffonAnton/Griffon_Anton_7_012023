@@ -1,5 +1,5 @@
 
-import React, { Component, useState, useEffect} from 'react';
+import React from 'react';
 import Paysage from "../../assets/paysage_1.png";
 import Card from '../../components/Card';
 import Logements from '../../data/logements.json';

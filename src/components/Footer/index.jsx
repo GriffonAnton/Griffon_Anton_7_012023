@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import LogoNegatif from "../../assets/logo_negatif.png"
 
 function Footer() {

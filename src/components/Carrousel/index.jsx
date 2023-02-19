@@ -1,5 +1,5 @@
 
-import React, { Component,useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { solid } from '@fortawesome/fontawesome-svg-core/import.macro';
@@ -48,7 +48,7 @@ function Carrousel({ picturesList }) {
             <div className='carrousel__arrow' onClick={previous}>
                 <FontAwesomeIcon icon={solid('chevron-left')}/>
             </div>
-            <img className='carrousel__images' src={picturesList[indexPicture-1]} alt='images du logement'/>
+            <img className='carrousel__images' src={picturesList[indexPicture - 1]} alt={'image du logement ' + indexPicture} />
             <div className='carrousel__arrow' onClick={next}>
                 <FontAwesomeIcon icon={solid('chevron-right')}/>
             </div>     

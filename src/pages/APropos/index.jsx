@@ -1,5 +1,5 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import Paysage from "../../assets/paysage_2.png";
 import Collapse from '../../components/Collapse';
 import Banner from '../../components/Banner';

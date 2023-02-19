@@ -1,0 +1,16 @@
+@import "../../sass/variables";
+
+.rating {
+    &__star {
+        font-size: 150%;
+        margin: 5px;
+
+        &--color {
+            color: $mainColor;
+        }
+
+        &--grey {
+            color: lightgray;
+        }
+    }
+}
