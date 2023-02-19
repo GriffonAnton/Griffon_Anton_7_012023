@@ -1,0 +1,16 @@
+@import "../../sass/variables";
+
+.tags {
+    display: flex;
+    &__tag{
+        display: flex;
+        background-color: $mainColor;
+        color: white;
+        font-size: 75%;
+        width: 90px;
+        padding: 3px;
+        border-radius: 3px;
+        justify-content: center;
+        margin-right: 5px;
+    }
+}

@@ -6,6 +6,7 @@ import Collapse from '../../components/Collapse';
 import Logements from '../../data/logements.json';
 import Error from '../Error';
 import Rating from '../../components/Rating';
+import Tags from '../../components/Tags';
 
 function FicheLogement() {
 
@@ -25,9 +26,7 @@ function FicheLogement() {
                 <div className='fiche_logement__header__left'>
                     <h1>{infoLogement.title}</h1>
                     <p>{infoLogement.location}</p>
-                    <div className='tags'>
-                        {infoLogement.tags.map(tag => <div className='tags__tag'>{tag}</div>)}
-                    </div>
+                    <Tags tags={infoLogement.tags}/>
                 </div>
                 <div className='fiche_logement__header__right'>
                     <div className='host'>
