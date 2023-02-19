@@ -37,10 +37,10 @@ function FicheLogement() {
                 </div>
             </div>
             <div className='fiche_logement__collapses'>
-                <div>
+                <div className='fiche_logement__collapses__wrapper'>
                     <Collapse title='Description' text={infoLogement.description} />
                 </div>
-                <div>
+                <div className='fiche_logement__collapses__wrapper'>
                     <Collapse title='Equipements' text={infoLogement.equipments.map(equipement => equipement + ('\n'))}/>
                 </div>
             </div>

@@ -4,19 +4,22 @@
     &__header{
         display: flex;
         justify-content: space-between;
+        color: $mainColor;
         &__right{
             display: flex;
             flex-direction: column;
+            align-items: end;
             justify-content: space-between;
+            padding-top: 20px;
         }
     }
     &__collapses{
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         margin-top: 10px;
 
-        & div{
-            width: 95%;
+        &__wrapper {
+            width: 49%;
         }
     }
 }
@@ -29,6 +32,8 @@
         margin: 5px;
         display: flex;
         flex-wrap: wrap;
+        width: 0;
+        justify-content: end;
     }
     & img{
         overflow: hidden;

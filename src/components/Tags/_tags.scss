@@ -6,11 +6,13 @@
         display: flex;
         background-color: $mainColor;
         color: white;
+        text-align: center;
         font-size: 75%;
         width: 90px;
         padding: 3px;
         border-radius: 3px;
         justify-content: center;
+        align-items: center;
         margin-right: 5px;
     }
 }
