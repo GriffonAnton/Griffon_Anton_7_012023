@@ -1,4 +1,5 @@
 @import "../../sass/variables";
+@import "../../sass/mixins";
 
 .fiche_logement {
     &__header{
@@ -18,7 +19,7 @@
         justify-content: space-between;
         margin-top: 10px;
 
-        &__wrapper {
+        & .collapse {
             width: 49%;
         }
     }
@@ -41,5 +42,22 @@
         width: 50px;
         aspect-ratio: 1/1;
         border-radius: 25px;
+    }
+}
+
+@include mobile-only {
+    .fiche_logement {
+        &__header {
+            flex-direction: column;
+            &__right {
+                flex-direction: row-reverse;
+            }
+        }
+        &__collapses {
+            flex-direction: column;
+            & .collapse {
+                width: 100%;
+            }
+        }
     }
 }

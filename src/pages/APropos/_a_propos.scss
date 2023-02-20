@@ -1,0 +1,18 @@
+@import "../../sass/mixins";
+
+.a_propos {
+    padding-bottom: 200px;
+    & .collapse {
+        margin-left: 7.5%;
+        margin-right: 7.5%;
+        width: 85%;
+    }
+    @include mobile-only {
+        padding-bottom: 150px;
+        & .collapse {
+            margin-left: 0;
+            margin-right: 0;
+            width: 100%;
+        }
+    }
+}

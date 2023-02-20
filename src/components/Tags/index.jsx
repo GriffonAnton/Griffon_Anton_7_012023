@@ -11,7 +11,7 @@ function Tags({tags}) {
 }
 
 Tags.propTypes = {
-    picturesList: PropTypes.array.isRequired
+    tags: PropTypes.array.isRequired
 }
 
 export default Tags;
