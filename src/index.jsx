@@ -1,5 +1,5 @@
 import './sass/main.scss';
-import React, { Component }  from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter as Router } from 'react-router-dom';

@@ -7,7 +7,7 @@ function Banner({ urlImage, text }) {
     return (
         <div className='banner'>
             <h1 className='banner__text'>{text}</h1>
-            <img className={`banner__image ${ text && 'banner__image--darker'}`} src={urlImage} alt='image de bannière' />
+            <img className={`banner__image ${ text && 'banner__image--darker'}`} src={urlImage} alt='fond de bannière' />
         </div>
     );
 
