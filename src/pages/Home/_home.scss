@@ -11,4 +11,9 @@
         justify-content: space-around;
         border-radius: 10px;
     }
+    @include mobile-only {
+        &__list {
+            background-color: white;
+        }
+    }
 }

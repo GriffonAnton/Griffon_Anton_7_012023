@@ -16,6 +16,11 @@ header {
             color: $mainColor;
         }
     }
+    .header__link {
+        &--underline {
+            text-decoration: underline!important;
+        }
+    }
     @include mobile-only {
         & img {
             width: 40%;

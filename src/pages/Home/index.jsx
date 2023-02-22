@@ -13,8 +13,8 @@ function Home() {
     <section className='home'>
       <Banner urlImage={Paysage} text='Chez vous, partout et ailleurs'/>
       <div className='home__list'>
-        {logementsList.map(logement =>
-          <Card id={logement.id} title={logement.title} cover={logement.cover} />
+        {logementsList.map((logement,index) =>
+          <Card id={logement.id} title={logement.title} cover={logement.cover} key={index} />
         )}
       </div>
     </section>

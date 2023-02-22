@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 function Tags({tags}) {
     return (
         <div className='tags'>
-            {tags.map(tag => <div className='tags__tag'>{tag}</div>)}
+            {tags.map((tag, index) => <div className='tags__tag' key={index}>{tag}</div>)}
         </div>
     );
 }

@@ -2,6 +2,9 @@
 @import "../../sass/mixins";
 
 .fiche_logement {
+    & h1 {
+        font-weight: 100;
+    }
     &__header{
         display: flex;
         justify-content: space-between;

@@ -12,9 +12,9 @@ function Rating ({stars}){
         let starsList = [];
         for (let i = 1; i <= 5; i++) {
             if (stars >= i) {
-                starsList.push(<FontAwesomeIcon className='rating__star rating__star--color' icon={solid('star')}/>);
+                starsList.push(<FontAwesomeIcon className='rating__star rating__star--color' icon={solid('star')} key={i}/>);
             } else {
-                starsList.push(<FontAwesomeIcon className='rating__star rating__star--grey' icon={solid('star')}/>);
+                starsList.push(<FontAwesomeIcon className='rating__star rating__star--grey' icon={solid('star')} key={i}/>);
             }
         }
         return starsList;

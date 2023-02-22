@@ -19,6 +19,8 @@ function FicheLogement() {
     
     console.log('+infoLogement.rating');
     console.log(+infoLogement.rating);
+    console.log('equipements')
+    console.log(infoLogement.equipments.map(equipement => equipement + ('\n')));
     return (
         <section className='fiche_logement'>
             <Carrousel picturesList={infoLogement.pictures} />
@@ -38,7 +40,7 @@ function FicheLogement() {
             </div>
             <div className='fiche_logement__collapses'>
                 <Collapse title='Description' text={infoLogement.description} />
-                <Collapse title='Equipements' text={infoLogement.equipments.map(equipement => equipement + ('\n'))}/>
+                <Collapse title='Equipements' text={infoLogement.equipments.map(equipement => equipement + ('\n')).toString().replaceAll(',','')}/>
             </div>
         </section>
     );
