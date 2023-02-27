@@ -5,7 +5,7 @@
     height: 400px;
     display: flex;
     justify-content: center;
-    align-items: end;
+    align-items: flex-end;
     &__images {
         overflow: hidden;
         object-fit: cover;
