@@ -20,10 +20,10 @@
         color: white;
         font-size: 75%;
         margin-right: 15px;
-        font-weight: 100;
+        font-weight: 600;
     }
     @include tablette-only {
-        width: 48%;
+        width: 47%;
         aspect-ratio: 3/2;
     }
     @include mobile-only {
